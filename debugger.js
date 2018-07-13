@@ -11,7 +11,7 @@ if (command === "spotify-this-song") {
     if (searchTerm = "") {
         searchTerm = "The Sign";
     }
-    spotify.search({ type: 'track', query: searchTerm }, function (err, data) {
+    spotify.search({ type: 'track', query: "landslide" }, function (err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
         }

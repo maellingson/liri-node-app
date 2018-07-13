@@ -13,7 +13,7 @@ var client = new Twitter(keys.twitter);
 //Takes in arguments from the terminal and outputs
 var command = process.argv[2];
 var searchTerm = process.argv[3];
-var searchTerm = process.argv.slice(3).join(" ");
+// var searchTerm = process.argv.slice(3).join(" ");
 
 //Loops through commands and responses
 //Twitter Command
@@ -32,12 +32,12 @@ if (command === "my-tweets") {
 }
 //Spotify Command
 else if (command === "spotify-this-song") {
-    if (searchTerm = "") {
-        searchTerm = "The Sign";
+    if (searchTerm === "") {
+        searchTerm === "The Sign";
     }
-    spotify.search({ type: "track", query: searchTerm }), function (err, data) {
+    spotify.search({ type: 'track', query: searchTerm }, function (err, data) {
         if (err) {
-            console.log(err);
+            return console.log('Error occurred: ' + err);
         }
         var songData = data.tracks.items;
         console.log("Song Name: " + songData[0].name);
@@ -45,7 +45,10 @@ else if (command === "spotify-this-song") {
         console.log("Preview Url: " + songData[0].preview_url);
         console.log("Album: " + songData[0].album.name);
 
-    };
+    });
+
+
+
 }
 
 //Movie Command
@@ -54,8 +57,8 @@ else if (command === "movie-this") {
     var queryURL = "http://www.omdbapi.com/?apikey=trilogy&t=" + searchTerm
 
     request(queryURL, function (error, response, body) {
-        if (!searchTerm) {
-            searchTerm = "Mr. Nobody"
+        if (searchTerm === "") {
+            searchTerm === "Mr. Nobody"
         }
         if (!error) {
             console.log("Title: " + JSON.parse(body).Title);
