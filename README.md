@@ -2,7 +2,7 @@
 
 Liri-node is an app that can take in commands, and return relevent results via the command line. This assignment uses the Twitter API, Spotify API and the OMDB API to handle requests. This app was created for the University of Minnesota Coding Boot Camp. 
 
-If you run the server and type "spotify-this" into the command line along with the title of the song, information about that song will appear in the command line. 
+If you run the server and type "spotify-this-song" into the command line along with the title of the song, information about that song will appear in the command line: 
 
 <img width="566" alt="screen shot 2018-08-06 at 5 16 40 pm" src="https://user-images.githubusercontent.com/35227935/43743861-14a85fcc-999d-11e8-8a74-6617a0b9dfd7.png">
 
